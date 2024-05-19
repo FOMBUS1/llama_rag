@@ -1,0 +1,6 @@
+transformers
+bitsandbytes
+peft
+accelerate
+chromadb
+sentence_transformers
