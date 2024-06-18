@@ -80,7 +80,7 @@ async def send_promt(url, headers, payload):
             async with session.post(url, headers=headers, data=payload) as response:
                 res = await response.json()
         print(res)
-        return res['choices'][0]['message']['content']
+        return res
 
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
