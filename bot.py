@@ -79,6 +79,7 @@ async def send_promt(url, headers, payload):
         async with aiohttp.ClientSession() as session:
             async with session.post(url, headers=headers, data=payload) as response:
                 res = await response.json()
+        print(res)
         return res['choices'][0]['message']['content']
 
 async def main() -> None:
