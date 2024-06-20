@@ -3,9 +3,11 @@ from chromadb.utils import embedding_functions
 import os
 import chromadb
 
-sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="ai-forever/sbert_large_nlu_ru")
+# Загрузка необходимых переменных
+path = os.getenv('RAG_PATH')
+model_name = os.getenv('MODEL_NAME')
 
-path = 'e:\\RAG\\'
+sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=model_name)
 
 files = os.listdir(path)
 
