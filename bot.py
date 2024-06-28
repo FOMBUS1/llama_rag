@@ -21,9 +21,9 @@ async def command_start_handler(message: Message) -> None:
 
 @dp.message()
 async def echo_handler(message: Message) -> None:
+    response = await message.answer("Здесь скоро будет ответ.")
     answer = await api.get_asnwer(message.text)
-
-    await message.answer(answer)
+    await response.edit_text(answer)
 
 
 async def main() -> None:
